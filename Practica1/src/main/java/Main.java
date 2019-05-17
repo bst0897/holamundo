@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println("\n"+doc.title()+"\n");
 
-        int lines = doc.html().split(System.getProperty("line.separator")).length;
+        int lines = doc.html().split(System.getProperty("\r\n | \r|\n")).length;
         Elements parrafos = doc.select("p");
         Elements imgs = doc.select("img");
         Elements pForms = doc.select("form[method = POST]");
